@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ActiveBox</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 
 <body>
@@ -46,14 +47,14 @@
                 <div class="header__logo">
                     <img src="./img/ActiveBox.png" alt="logo" srcset="">
                 </div>
-                <nav class="nav">
-                    <a href="#" class="nav__link">Features</a>
-                    <a href="#" class="nav__link">Works</a>
-                    <a href="#" class="nav__link">Our Team</a>
-                    <a href="#" class="nav__link">Testimonials</a>
-                    <a href="#" class="nav__link">Download</a>
+                <nav class="nav" id="nav">
+                    <a href="#" class="nav__link" data-scroll="#features">Features</a>
+                    <a href="#" class="nav__link" data-scroll="#works">Works</a>
+                    <a href="#" class="nav__link" data-scroll="#team">Our Team</a>
+                    <a href="#" class="nav__link" data-scroll="#reviews">Testimonials</a>
+                    <a href="#" class="nav__link" data-scroll="#download">Download</a>
                 </nav>
-                <button class="burger" type="button">
+                <button class="burger" type="button" id="navToggle">
                     <span class="burger__item">Menu</span>
                 </button>
             </div>
@@ -74,7 +75,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="features">
         <div class="features">
             <div class="features__item">
                 <img class="features__icon" src="./img/features/1.png" alt="">
@@ -133,7 +134,7 @@
         </div>
     </div>
 
-    <div class="works">
+    <div class="works" id="works">
         <div class="works__item">
             <img src="./img/works/1.png" alt="works" class="works__photo">
             <div class="works__content">
@@ -192,7 +193,7 @@
         </div>
     </div>
 
-    <div class="team">
+    <div class="team" id="team">
         <div class="container">
             <div class="team__inner">
                 <div class="team__item">
@@ -315,29 +316,70 @@
         </div>
     </div>
 
-    <div class="reviews">
+    <div class="reviews" id="reviews">
         <div class="container">
 
-            <div class="reviews__item">
-                <div class="reviews__photo">
-                    <img class="reviews__img" src="./img/reviews/1.png" alt="reviews">
-                </div>
-                <div class="reviews__content">
-                    <div class="reviews__text">
-                        “Integer posuere erat a ante venenatis dapibus posuere 
-                        velit aliquet. Donec sed odio dui. Aenean eu 
-                        leo quam...”
-                    </div>
-                    <div class="reviews__author">
-                        Susan Sims, Interaction Designer at XYZ
-                    </div>
-                </div>
-            </div>
+            <div class="reviews__slider" id="reviewsSlider">
 
+                <div class="slick-item">
+                    <div class="reviews__item">
+                        <div class="reviews__photo">
+                            <img class="reviews__img" src="./img/reviews/1.png" alt="reviews">
+                        </div>
+                        <div class="reviews__content">
+                            <div class="reviews__text">
+                                “Integer posuere erat a ante venenatis dapibus posuere 
+                                velit aliquet. Donec sed odio dui. Aenean eu 
+                                leo quam...”
+                            </div>
+                            <div class="reviews__author">
+                                Susan Sims, Interaction Designer at XYZ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slick-item">
+                    <div class="reviews__item">
+                        <div class="reviews__photo">
+                            <img class="reviews__img" src="./img/reviews/1.png" alt="reviews">
+                        </div>
+                        <div class="reviews__content">
+                            <div class="reviews__text">
+                                “Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Dignissimos consequuntur incidunt recusandae veniam, dolorem 
+                                ...”
+                            </div>
+                            <div class="reviews__author">
+                                Susan Sims, Interaction Designer at XYZ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slick-item">
+                    <div class="reviews__item">
+                        <div class="reviews__photo">
+                            <img class="reviews__img" src="./img/reviews/1.png" alt="reviews">
+                        </div>
+                        <div class="reviews__content">
+                            <div class="reviews__text">
+                                “Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Voluptas commodi ipsam tempora velit quaerat possimus debitis 
+                                est nesciunt provident magnam exercitationem illum voluptatum
+                            </div>
+                            <div class="reviews__author">
+                                Susan Sims, Interaction Designer at XYZ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </div>
 
-    <div class="download">
+    <div class="download" id="download">
         <div class="container">
             <h3 class="download__title">
                 Are You Ready to Start? Download Now For Free!
@@ -401,6 +443,7 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./app/main.js"></script>
 
 </body>

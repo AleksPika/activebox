@@ -464,9 +464,17 @@ p{
     overflow: hidden;
     background-color: #53354a;
 }
+.reviews__slider{
+    height: 500px;
+    overflow: hidden;
+}
+.reviews__slider.slick-initialized{
+    height: auto;
+}
 .reviews__item{
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 .reviews__photo{
     width: 50%;
@@ -504,6 +512,37 @@ p{
     font-family: "Raleway";
     text-transform: uppercase;
 }
+.slick-dots{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 50%;
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    z-index: 2;
+}
+.slick-dots button{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    margin: 2px;
+    opacity: .5;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    color: transparent;
+    outline: none;
+}
+.slick-dots .slick-active button{
+    opacity: 1;
+}
+
 
 /*Download
 ============================================*/
@@ -592,6 +631,19 @@ p{
 @media (max-width: 991px){
     .nav{
         display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: right;
+        background-color: #31344e;
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+    .nav.show{
+        display: flex;
+    }
+    .nav__link{
+        padding: 9px 15px;
     }
     .burger{
         display: block;
